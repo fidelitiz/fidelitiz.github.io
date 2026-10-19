@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8c83e">
+  <meta name="description" content="Parlez-nous de votre commerce et de votre projet de fidélité. Retrouvez votre entreprise par nom, SIREN ou SIRET.">
+  <title>Intéressé ? Parlons de votre commerce | FIDELITIZ</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <style>
+    @font-face{font-family:Fredoka;src:url('/_next/static/media/fredoka-latin-wght-normal.DM6njrJ3.woff2') format('woff2');font-display:swap;font-weight:300 700}
+    :root{--ink:#1c1712;--brown:#5b2f22;--coral:#ef5948;--yellow:#f8c83e;--cream:#fff8e9;--paper:#fffcf5;--muted:#6e6257}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Fredoka,'Arial Rounded MT Bold',Arial,sans-serif;font-weight:450}button,input,textarea{font:inherit}a{color:inherit;text-decoration:none}button{cursor:pointer}button:disabled{cursor:wait;opacity:.6}
+    .top{background:var(--yellow)}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;width:min(1160px,calc(100% - 40px));margin:auto;padding:22px 0;border-bottom:1px solid #1c171230}.brand{display:flex;align-items:center;gap:9px;font-size:25px;font-weight:650;letter-spacing:-.06em;white-space:nowrap}.brand-mark{position:relative;width:23px;height:25px}.brand-mark i{position:absolute;display:block;border-radius:8px}.brand-mark i:first-child{left:1px;top:1px;width:6px;height:23px;background:var(--brown)}.brand-mark i:nth-child(2){left:4px;top:1px;width:18px;height:6px;background:var(--coral)}.brand-mark i:nth-child(3){left:4px;top:11px;width:14px;height:6px;background:#ef8734}.brand span:last-child span{color:var(--coral)}.nav-actions{display:flex;align-items:center;gap:14px;font-size:14px;font-weight:600}.nav-actions a:first-child{padding:10px}.nav-actions a:last-child{padding:11px 17px;border:1.5px solid var(--ink);border-radius:12px}
+    .intro{width:min(1160px,calc(100% - 40px));margin:auto;padding:65px 0 78px;display:grid;grid-template-columns:1.25fr .75fr;gap:50px;align-items:end}.eyebrow{font-size:12px;font-weight:650;letter-spacing:.15em;text-transform:uppercase}.intro h1{margin:14px 0 20px;max-width:810px;font-size:clamp(54px,8vw,103px);font-weight:560;line-height:.93;letter-spacing:-.065em}.intro h1 span{color:var(--coral)}.intro p{margin:0;max-width:540px;font-size:18px;line-height:1.5}.intro-note{padding:22px;border-left:2px solid var(--ink);font-size:15px;line-height:1.5}.intro-note strong{display:block;margin-bottom:6px;font-size:17px}
+    .main{width:min(1160px,calc(100% - 40px));margin:-25px auto 100px;position:relative;display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:20px;align-items:start}.panel{min-width:0;padding:clamp(22px,4vw,48px);border:1px solid #321c1628;border-radius:25px;background:var(--paper);box-shadow:0 20px 55px #321c1610}.panel h2{margin:0 0 7px;font-size:clamp(28px,4vw,42px);font-weight:560;letter-spacing:-.045em}.step{display:flex;align-items:center;gap:12px;margin-bottom:18px}.step-number{display:grid;place-items:center;width:31px;height:31px;border-radius:50%;background:var(--ink);color:var(--paper);font-size:14px;font-weight:650}.section-intro{margin:0 0 24px;color:var(--muted);line-height:1.5}.search-row{display:flex;gap:10px}.search-row input{flex:1}.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 19px;border:1.5px solid var(--ink);border-radius:11px;background:var(--ink);color:var(--paper);font-size:15px;font-weight:600}.button:hover,.button:focus-visible{background:var(--brown)}.button-outline{background:transparent;color:var(--ink)}.button-outline:hover,.button-outline:focus-visible{background:var(--yellow)}.field{display:grid;gap:7px;min-width:0;font-size:14px;font-weight:600}.field small{color:var(--muted);font-weight:450}.field input,.field textarea,.search-row input{width:100%;min-width:0;padding:13px 15px;border:1px solid #321c1640;border-radius:11px;background:#fff;color:var(--ink);font-size:15px;outline:none}.field input:focus,.field textarea:focus,.search-row input:focus{border-color:var(--brown);box-shadow:0 0 0 3px #f8c83e70}.field input[readonly]{background:#f8f3e9;color:#51463d}.field textarea{min-height:100px;resize:vertical}.results{display:grid;gap:8px;margin-top:11px}.result{width:100%;padding:14px 16px;border:1px solid #321c1628;border-radius:12px;background:#fff;text-align:left}.result:hover,.result:focus-visible{border-color:var(--brown);background:#fff9e8}.result strong{display:block;font-size:15px}.result span{display:block;margin-top:4px;color:var(--muted);font-size:13px}.hint{margin:10px 0 0;color:var(--muted);font-size:13px;line-height:1.5}.status{min-height:23px;margin:10px 0 0;font-size:13px;line-height:1.4}.status.error{color:#9f3025}.divider{height:1px;margin:32px 0;background:#321c1625}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}.full{grid-column:1/-1}.consent{display:flex;gap:10px;align-items:flex-start;margin:22px 0 0;font-size:13px;line-height:1.5}.consent input{width:18px;height:18px;margin:1px 0 0;accent-color:var(--brown);flex:none}.consent a{text-decoration:underline}.actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:24px}.aside{padding:26px;border-radius:20px;background:#ffebad}.aside h3{margin:0 0 9px;font-size:22px;letter-spacing:-.03em}.aside p{margin:0;font-size:14px;line-height:1.55}.aside a{display:inline-block;margin-top:15px;text-decoration:underline;text-underline-offset:3px}.foot{width:min(1160px,calc(100% - 40px));margin:0 auto;padding:28px 0 45px;border-top:1px solid #321c1628;display:flex;justify-content:space-between;gap:15px;color:var(--muted);font-size:13px}
+    @media(max-width:800px){.intro{grid-template-columns:1fr;gap:28px;padding:48px 0 66px}.intro-note{max-width:520px}.main{grid-template-columns:1fr}.aside{order:2}.nav-actions a:first-child{display:none}}
+    @media(max-width:540px){.nav{width:calc(100% - 32px);padding:17px 0}.brand{font-size:21px}.nav-actions a:last-child{font-size:12px;padding:10px 11px}.intro,.main,.foot{width:calc(100% - 32px)}.intro{padding:41px 0 56px}.intro h1{font-size:clamp(52px,14vw,72px)}.intro p{font-size:16px}.main{margin-top:-18px;margin-bottom:60px}.panel{padding:21px;border-radius:19px}.fields{grid-template-columns:1fr}.search-row{flex-direction:column}.search-row .button{width:100%}.actions .button{width:100%}.foot{flex-direction:column}.full{grid-column:auto}}
+  </style>
+</head>
+<body>
+  <header class="top"><nav class="nav" aria-label="Navigation principale"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>IDELITIZ<span>.</span></span></a><div class="nav-actions"><a href="/">Découvrir FIDELITIZ</a><a href="/fidelitiz-mobile-test/">Tester la démo ↗</a></div></nav><div class="intro"><div><span class="eyebrow">Votre projet avec nous</span><h1>Parlons de votre commerce<span>.</span></h1><p>Retrouvez votre entreprise, vérifiez ses informations et dites-nous comment vous aimeriez fidéliser vos clients.</p></div><div class="intro-note"><strong>Deux minutes suffisent.</strong>Les données publiques de votre entreprise remplissent la fiche. Vous n’avez plus qu’à nous laisser vos coordonnées.</div></div></header>
+  <main class="main"><div class="panel"><form id="interest-form"><section aria-labelledby="company-title"><div class="step"><span class="step-number">1</span><h2 id="company-title">Votre entreprise</h2></div><p class="section-intro">Cherchez par nom, SIREN ou SIRET. Choisissez le bon établissement dans les résultats.</p><div class="search-row"><input id="company-search" type="search" autocomplete="off" minlength="3" placeholder="Nom, SIREN ou SIRET" aria-label="Rechercher une entreprise"><button class="button" id="search-button" type="button">Rechercher</button></div><p class="hint">Recherche dans l’<a href="https://recherche-entreprises.api.gouv.fr/docs/" target="_blank" rel="noreferrer" style="text-decoration:underline">annuaire public des entreprises</a>.</p><p class="status" id="search-status" role="status" aria-live="polite"></p><div class="results" id="results" aria-label="Résultats de recherche"></div><div class="divider"></div><div class="fields"><label class="field full">Nom du commerce ou de l’entreprise<input name="business" autocomplete="organization" required maxlength="120"></label><label class="field">SIREN <small>si connu</small><input name="siren" inputmode="numeric" pattern="[0-9]{9}" maxlength="9"></label><label class="field">SIRET <small>si connu</small><input name="siret" inputmode="numeric" pattern="[0-9]{14}" maxlength="14"></label><label class="field full">Adresse<input name="address" autocomplete="street-address" maxlength="180"></label><label class="field">Code postal<input name="postalCode" autocomplete="postal-code" maxlength="10"></label><label class="field">Ville<input name="city" autocomplete="address-level2" maxlength="100"></label><label class="field">Activité principale <small>code APE/NAF</small><input name="activity" maxlength="20"></label><label class="field">Forme juridique <small>code public</small><input name="legalForm" maxlength="20"></label></div></section><div class="divider"></div><section aria-labelledby="contact-title"><div class="step"><span class="step-number">2</span><h2 id="contact-title">Et vous ?</h2></div><p class="section-intro">Dites-nous comment vous joindre et ce que vous cherchez.</p><div class="fields"><label class="field">Prénom<input name="firstName" autocomplete="given-name" required maxlength="80"></label><label class="field">Nom<input name="lastName" autocomplete="family-name" required maxlength="80"></label><label class="field">E-mail professionnel<input name="email" type="email" autocomplete="email" required maxlength="254"></label><label class="field">Téléphone <small>facultatif</small><input name="phone" type="tel" autocomplete="tel" maxlength="40"></label><label class="field full">Votre projet<textarea name="message" maxlength="2000" placeholder="Carte de fidélité, avis NFC, plusieurs points de vente…"></textarea></label></div><label class="consent"><input type="checkbox" name="consent" required><span>J’accepte que FIDELITIZ utilise ces informations pour répondre à ma demande. <a href="/confidentialite/">En savoir plus</a>.</span></label><div class="actions"><button class="button" type="submit">Préparer ma demande ↗</button><button class="button button-outline" type="button" id="copy-button">Copier ma demande</button></div><p class="status" id="form-status" role="status" aria-live="polite"></p><p class="hint">Votre messagerie s’ouvre pour confirmer l’envoi à bonjour@fidelitiz.fr.</p></section></form></div><aside class="aside"><h3>Envie de voir avant ?</h3><p>Explorez le tableau de bord mobile, la carte de fidélité et le parcours d’avis.</p><a href="/fidelitiz-mobile-test/">Ouvrir la démo ↗</a></aside></main>
+  <footer class="foot"><a href="/">FIDELITIZ © 2026</a><div><a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité</a></div></footer>
+  <script>
+    const search = document.querySelector('#company-search');
+    const results = document.querySelector('#results');
+    const searchStatus = document.querySelector('#search-status');
+    const form = document.querySelector('#interest-form');
+    const formStatus = document.querySelector('#form-status');
+    let searchController;
+    let timer;
+    function status(message, error = false) { searchStatus.textContent = message; searchStatus.classList.toggle('error', error); }
+    function setField(name, value) { form.elements.namedItem(name).value = value ?? ''; }
+    function choose(company) {
+      const requestedSiret = search.value.replace(/\D/g, '');
+      const location = (requestedSiret.length === 14 ? company.matching_etablissements?.find(item => item.siret === requestedSiret) : null) || company.siege || company.matching_etablissements?.[0] || {};
+      setField('business', company.nom_complet || company.nom_raison_sociale);
+      setField('siren', company.siren);
+      setField('siret', location.siret);
+      setField('address', [location.complement_adresse, location.numero_voie, location.type_voie, location.libelle_voie].filter(Boolean).join(' ') || location.adresse);
+      setField('postalCode', location.code_postal);
+      setField('city', location.libelle_commune);
+      setField('activity', company.activite_principale || location.activite_principale);
+      setField('legalForm', company.nature_juridique);
+      search.value = company.nom_complet || company.nom_raison_sociale || '';
+      results.replaceChildren();
+      status('Entreprise sélectionnée. Vérifiez les informations avant de continuer.');
+      form.elements.namedItem('business').focus();
+    }
+    async function runSearch() {
+      const q = search.value.trim();
+      results.replaceChildren();
+      if (q.length < 3) { status('Saisissez au moins 3 caractères.', true); return; }
+      searchController?.abort();
+      searchController = new AbortController();
+      status('Recherche en cours…');
+      document.querySelector('#search-button').disabled = true;
+      try {
+        const url = new URL('https://recherche-entreprises.api.gouv.fr/search');
+        url.searchParams.set('q', q);
+        url.searchParams.set('per_page', '6');
+        const response = await fetch(url, { signal: searchController.signal, headers: { accept: 'application/json' } });
+        if (!response.ok) throw new Error(response.status === 429 ? 'Trop de recherches. Réessayez dans un instant.' : 'Recherche momentanément indisponible.');
+        const data = await response.json();
+        const companies = Array.isArray(data.results) ? data.results : [];
+        if (!companies.length) { status('Aucune entreprise trouvée. Vous pouvez saisir les informations ci-dessous.'); return; }
+        status(`${companies.length} résultat${companies.length > 1 ? 's' : ''}. Sélectionnez votre entreprise.`);
+        for (const company of companies) {
+          const button = document.createElement('button'); button.type = 'button'; button.className = 'result';
+          const name = document.createElement('strong'); name.textContent = company.nom_complet || company.nom_raison_sociale || 'Entreprise';
+          const detail = document.createElement('span'); detail.textContent = `SIREN ${company.siren || '—'} · ${company.siege?.libelle_commune || 'Ville non renseignée'}`;
+          button.append(name, detail); button.addEventListener('click', () => choose(company)); results.append(button);
+        }
+      } catch (error) { if (error.name !== 'AbortError') status(`${error.message} Vous pouvez remplir la fiche manuellement.`, true); }
+      finally { document.querySelector('#search-button').disabled = false; }
+    }
+    document.querySelector('#search-button').addEventListener('click', runSearch);
+    search.addEventListener('keydown', event => { if (event.key === 'Enter') { event.preventDefault(); clearTimeout(timer); runSearch(); } });
+    search.addEventListener('input', () => { clearTimeout(timer); if (search.value.trim().length >= 3) timer = setTimeout(runSearch, 500); else { results.replaceChildren(); status(''); } });
+    function demandText() { const data = new FormData(form); return `Bonjour FIDELITIZ,\n\nJe souhaite en savoir plus pour mon commerce.\n\nEntreprise : ${data.get('business')}\nSIREN : ${data.get('siren') || 'Non renseigné'}\nSIRET : ${data.get('siret') || 'Non renseigné'}\nAdresse : ${data.get('address') || ''}, ${data.get('postalCode') || ''} ${data.get('city') || ''}\nCode APE/NAF : ${data.get('activity') || 'Non renseigné'}\nForme juridique : ${data.get('legalForm') || 'Non renseignée'}\n\nContact : ${data.get('firstName')} ${data.get('lastName')}\nE-mail : ${data.get('email')}\nTéléphone : ${data.get('phone') || 'Non renseigné'}\n\nProjet : ${data.get('message') || 'Présentation du service'}\n\nConsentement au traitement pour répondre à cette demande : oui.`; }
+    form.addEventListener('submit', event => { event.preventDefault(); if (!form.reportValidity()) return; const subject = `Projet FIDELITIZ — ${form.elements.namedItem('business').value}`; const url = `mailto:bonjour@fidelitiz.fr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(demandText())}`; formStatus.textContent = 'Votre messagerie s’ouvre. Vérifiez puis envoyez votre e-mail.'; window.location.href = url; });
+    document.querySelector('#copy-button').addEventListener('click', async () => { if (!form.reportValidity()) return; try { await navigator.clipboard.writeText(demandText()); formStatus.textContent = 'Demande copiée. Envoyez-la à bonjour@fidelitiz.fr.'; } catch { formStatus.textContent = 'Copie indisponible sur cet appareil. Utilisez le bouton « Préparer ma demande ».'; } });
+  </script>
+</body>
+</html>
