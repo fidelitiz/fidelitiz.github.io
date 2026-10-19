@@ -28,6 +28,12 @@ jobs:
           cat fidelity-site.part-* > fidelity-site.zip
           mkdir _site
           unzip -q fidelity-site.zip -d _site
+      - name: Verify route files before publishing
+        run: |
+          test -s _site/index.html
+          test -s _site/tarifs/index.html
+          test -s _site/parcours-client/index.html
+          find _site -maxdepth 2 -type f | sort | head -n 50
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
