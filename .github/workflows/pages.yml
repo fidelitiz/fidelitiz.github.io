@@ -28,12 +28,21 @@ jobs:
           cat fidelity-site.part-* > fidelity-site.zip
           mkdir _site
           unzip -q fidelity-site.zip -d _site
+      - name: Add GitHub Pages contact and navigation
+        run: |
+          mkdir -p _site/interesse
+          cp interesse.html _site/interesse/index.html
+          cp site-patch.js _site/site-patch.js
+          find _site -name "*.html" ! -path "_site/interesse/*" -exec sed -i "s#</body>#<script defer src=\"/site-patch.js\"></script></body>#" {} +
+          sed -i "s#https://fidelitiz-mobile-test.el-robino.chatgpt.site/api/contact#/interesse/#g" _site/_next/static/chunks/ContactForm-CJBAP269.js
       - name: Verify route files before publishing
         run: |
           test -s _site/index.html
           test -s _site/tarifs/index.html
           test -s _site/parcours-client/index.html
-          find _site -maxdepth 2 -type f | sort | head -n 50
+          test -s _site/interesse/index.html
+          grep -q site-patch.js _site/index.html
+          ! grep -Rq --include="*.js" chatgpt.site _site
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
