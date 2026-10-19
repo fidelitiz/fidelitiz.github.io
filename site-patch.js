@@ -6,6 +6,13 @@
   document.head.append(style);
 
   function patch() {
+    for (const img of document.querySelectorAll('img[data-nimg]')) {
+      const encoded = new URL(img.getAttribute('src') || '', location.origin).searchParams.get('url');
+      if (!encoded?.startsWith('/') || !img.getAttribute('src')?.includes('/_next/image?')) continue;
+      img.removeAttribute('srcset');
+      img.removeAttribute('sizes');
+      img.src = encoded;
+    }
     for (const nav of document.querySelectorAll('nav.nav')) {
       const links = nav.querySelector('.nav-links');
       if (!links || links.querySelector('.interest-nav')) continue;
