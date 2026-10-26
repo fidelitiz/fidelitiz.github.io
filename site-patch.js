@@ -29,14 +29,18 @@
       else if (link.textContent?.trim() === 'Écrire à l’équipe') link.textContent = 'Contacter l’équipe';
     }
     for (const form of document.querySelectorAll('form.contact-form')) {
+      const phone = form.elements.namedItem('phone');
+      if (phone) {
+        phone.required = true;
+        const optionalLabel = phone.closest('label')?.querySelector('span');
+        if (optionalLabel?.textContent?.includes('facultatif')) optionalLabel.remove();
+      }
       if (form.dataset.githubContact === 'true') continue;
       form.dataset.githubContact = 'true';
       const button = form.querySelector('button[type="submit"]');
       if (button) button.textContent = 'Envoyer ma demande ↗';
       const note = form.querySelector('.contact-submit p');
       if (note) note.textContent = 'Nous vous recontacterons après réception de votre demande.';
-      const phone = form.elements.namedItem('phone');
-      if (phone) phone.required = true;
       form.addEventListener('submit', async event => {
         event.preventDefault();
         event.stopImmediatePropagation();
