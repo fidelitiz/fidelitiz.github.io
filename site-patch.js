@@ -28,6 +28,11 @@
       if (link.textContent?.includes('@fidelitiz.fr')) link.textContent = 'Nous contacter';
       else if (link.textContent?.trim() === 'Écrire à l’équipe') link.textContent = 'Contacter l’équipe';
     }
+    for (const paragraph of document.querySelectorAll('main p')) {
+      if (paragraph.textContent?.includes('privacy@fidelitiz.fr')) {
+        paragraph.textContent = paragraph.textContent.replace('Écrivez à privacy@fidelitiz.fr.', 'Utilisez notre formulaire de contact pour exercer vos droits.');
+      }
+    }
     for (const form of document.querySelectorAll('form.contact-form')) {
       const phone = form.elements.namedItem('phone');
       if (phone) {
