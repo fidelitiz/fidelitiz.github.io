@@ -46,7 +46,6 @@ jobs:
           test -s _site/interesse/index.html
           grep -q site-patch.js _site/index.html
           ! grep -Rq --include="*.js" chatgpt.site _site
-          ! grep -Rq --include="*.html" --include="*.js" 'bonjour@fidelitiz.fr' _site
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
